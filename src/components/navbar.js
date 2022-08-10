@@ -12,8 +12,9 @@ import '../css/App.css'
    <nav className='flexSB'>
     <ul className={click ? "mobile-nav" : "flexSB " } onClick={()=>setClick(false)}>
         <li><Link to="/">Accueil</Link></li>
+        <li><Link to="/àpropos">À propos</Link></li>
         <li><Link to="/cours">Cours</Link></li>
-       {/* <li><Link to="/explorer">Explorer</Link></li>*/} 
+       
         <li><Link to="/communeauté">Communeauté</Link></li>
         <li><Link to="/contact">Contact</Link></li>
     </ul>

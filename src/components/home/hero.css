@@ -20,12 +20,12 @@ div.row{
 }
 div.row p{
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-weight: 900;
-  font-size: large;
-  color: #000;
+  font-weight: 500;
+  font-size: 30px;
+
 }
 button.explore{
-  padding: 17px 30px;
+  padding: 18px 30px;
   background-color: #fff;
   color: #1eb2a6;
   font-weight: 600;
@@ -54,6 +54,6 @@ button.explore{
  div.row{
   top: 0;
   position: fixed;
-  margin: 400px 0px 600px 0;
+  margin: 411px 0px 600px 0;
   }
 }

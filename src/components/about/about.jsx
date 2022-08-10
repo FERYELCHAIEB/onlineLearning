@@ -1,10 +1,11 @@
 import React from 'react'
-
+import Back from './back';
+import SectionAbout from './sectionAbout';
 function About() {
   return (
-    <><h1>
-        About us
-    </h1>
+    <>
+    <Back title='À propos de nous'/>
+    <SectionAbout/>
     </>
   )
 }

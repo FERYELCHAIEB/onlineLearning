@@ -10,7 +10,7 @@ import './hero.css'
     <div className='row'>
       
 <p> Apprenez des nouvelles connaissances en E-commerce </p>
-<p> facilement à travers des cours en ligne</p>
+<p> à travers des cours en ligne</p>
    <div>
     <button className='explore'>Explorez les cours</button>
    </div>
