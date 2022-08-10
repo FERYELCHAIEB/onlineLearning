@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #DCDCDC;
+  
+}
+.flexSB{
+  display: flex;
+  justify-content: space-between;
+}
+.head {
+  
+    padding: 20px 30px;
+    color: #000;
+  }
+.logo h1 {
+   
+    font-size: 28px;
+    font-weight: 900;
+  }
+  
+.head .container{
+    padding: 15px 15px;
+}
+
+
+
+header{
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 30px;
+  }
+
+header ul{
+    padding: 20px 20px;
+}
+header li{
+    margin-right: 40px;
+  }
+header ul li a{
+    color: #1eb2a6;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.5s;
+
+  
+}
+
+header ul li a:hover {
+    color: black;
+  }
+
+li{
+  list-style-type: none;
+  letter-spacing: normal;
+  }
+
+
+  button{
+    border: none;
+  }
+
+  .start {
+    position: right;
+    font-weight: 600;
+    background-color: #1eb2a6;
+    padding: 30px 70px;
+    color: #fff;
+    clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .toggle{
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    div.logo{
+ font-size: small;
+ display: block;
+margin-left: -35px;
+    }
+    .logo h1{
+      font-size: 15px;
+      margin-left: 0;
+    }
+     
+   .head .search{
+    display: block;
+      right: 0px;
+      margin-right:190px;
+     
+    }
+   .head .connexion{
+    left: 0px;
+    margin-left: 390px;}
+   .head .connexion .inscri {
+    margin-top: 3px;
+    margin-left: 10px;
+    display: block;
+    }
+    .start{
+      clip-path: none;
+    }
+    header{
+      margin : 0;
+      background-color: #1eb2a6;
+      position: relative;
+    }
+    header ul li a{
+      color: #fff;}
+    header ul.flexSB {
+      display: none;
+      
+    }
+   
+    header ul li{
+    
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .toggle{
+      display: block;
+      background: none;
+      font-size: 30px;
+     
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-right: 10px;
+      right: 0;
+      position: relative;
+      color: #fff;
+      border-color: #fff;
+    }
+    .mobile-nav{
+      position: absolute;
+      top: 7vh;
+      left: 0;
+      width: 100%;
+      background-color: #1eb2a6;
+
+    }
+    
+  }
+
+  .search{
+
+    
+    width: 30%;
+    position: fixed;
+    right: 0px;
+    margin-right:500px;
+    top: 0px;
+    margin-top: 30px;
+  }
+.connexion{
+  position: fixed;
+  right: 0px;
+  margin-right: 40px;
+  top: 0px;
+  margin-top: 30px;
+}
+
