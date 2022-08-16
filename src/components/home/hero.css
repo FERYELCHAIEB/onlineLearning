@@ -10,12 +10,12 @@
   height: 100vh;
   
   
-  color: #fff;
+  color: #000;
 
 }
 div.row{
   top: 0;
-  position: fixed;
+  position: absolute;
   margin: 460px 0px 600px 0;
 }
 div.row p{
@@ -25,7 +25,7 @@ div.row p{
 
 }
 button.explore{
-  padding: 18px 30px;
+    padding: 18px 30px;
   background-color: #fff;
   color: #1eb2a6;
   font-weight: 600;

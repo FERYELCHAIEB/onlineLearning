@@ -18,7 +18,7 @@ import './hero.css'
     </div>
     </div>
    </section>
-   <div className='margin'></div>
+   <div className='marigin'></div>
     </>
   )
 }

@@ -11,7 +11,7 @@ function Head (){
    <section className='head'>
    <div className='container'>
           <div className='logo'>
-            <h1>WESS E-commerce</h1>
+            <h1>WESS E-commerce</h1><br/>
             <span>Etudier E-commerce en ligne</span>
           </div>
           <div className="search ">

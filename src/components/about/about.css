@@ -28,14 +28,17 @@
 }
 
 .aboutPage .items{
-    margin-top: 50px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
 }
 
 .aboutPage .item{
      background-color: #fff;
      margin-top: 30px;
      padding: 20px;
-     transition: 0.5s;
+     
 }
 
 .aboutPage img{
@@ -45,6 +48,7 @@
     width: 70px;
     height: 70px;
 }
+
 
 .aboutPage .item:hover{
     background-color: #1eb2a6;
