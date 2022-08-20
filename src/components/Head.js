@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from "react-router-dom"
 import '../css/App.css'
 
 import Button from 'react-bootstrap/Button';
@@ -27,10 +27,10 @@ function Head (){
  </div>
 
 
-
+ 
        <div className='connexion '>
-     <Button  variant="secondary">Se connecter</Button> {' '}
-     <Button  variant="outline-secondary" className='inscri'>S'inscrire</Button>
+     <Button  variant="secondary"><Link to="/connexion">Se connecter</Link></Button> {' '}
+     <Button  variant="outline-secondary" className='inscri'><Link to="/compte">S'inscrire</Link></Button>
        </div>
           </div>
 

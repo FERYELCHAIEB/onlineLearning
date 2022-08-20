@@ -9,7 +9,8 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: #DCDCDC;
+    background-color: beige;
+
   
 }
 .flexSB{
@@ -70,7 +71,7 @@ header ul li a{
 
   
 }
-
+ 
 header ul li a:hover {
     color: black;
   }
@@ -183,7 +184,7 @@ width: 100%;
 height: 100vh;
 text-align: center;
 
-color: #fff;
+color: #fff; 
 }
 
 .back h1{
@@ -193,7 +194,7 @@ color: #fff;
 }
 .back h2{
   font-weight: 500;
-  font-size: 17px;
+  font-size: 20px;
   text-transform: uppercase;
 
 }
@@ -213,6 +214,7 @@ color: #fff;
   letter-spacing: 1px;
   color: #1eb2a6;
   text-transform: uppercase;
+  font-size: 30px;
 }
 
 #heading h2{
@@ -264,3 +266,16 @@ color: #fff;
   background-color: #1eb2a6;
   color: #fff;
 }
+
+
+.connexion a{
+  color: #fff;
+  text-decoration: none;}
+
+  .connexion .inscri a{
+    color: #626262;
+  } 
+
+  .connexion a:hover{
+    color: #fff;
+  }

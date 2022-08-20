@@ -13,6 +13,9 @@ import Equipe from './components/community/equipe';
 
 import ContactForm from './components/Contacter/ContactForm';
 import Footer from './components/footer/Footer';
+import SignUp from './components/auth/signUp';
+import Login from './components/auth/login';
+import Admin from './components/admin/admin';
 
 
 
@@ -23,14 +26,17 @@ function App() {
     <>
  
  <Router>
-        <Navbar/>
+        
         <Switch>
+      
         <Route  path='/' exact component={Home}/>
         <Route  path='/àpropos' exact component={About}/>
         <Route  path='/cours' exact component={PageCours}/>
         <Route  path='/communeauté' exact component={Equipe}/>
         <Route  path='/contact' exact component={ContactForm}/>
-      
+        <Route  path='/connexion' exact component={Login}/>
+        <Route  path='/compte' exact component={SignUp}/>
+        <Route  path='/admin' exact component={Admin}/>
         </Switch>
       <Footer/>
       </Router>
