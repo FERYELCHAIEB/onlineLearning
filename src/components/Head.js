@@ -29,8 +29,8 @@ function Head (){
 
  
        <div className='connexion '>
-     <Button  variant="secondary"><Link to="/connexion">Se connecter</Link></Button> {' '}
-     <Button  variant="outline-secondary" className='inscri'><Link to="/compte">S'inscrire</Link></Button>
+     <Button  variant="secondary"><Link to="/login">Se connecter</Link></Button> {' '}
+     <Button  variant="outline-secondary" className='inscri'><Link to="/register">S'inscrire</Link></Button>
        </div>
           </div>
 
