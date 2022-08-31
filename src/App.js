@@ -19,6 +19,11 @@ import Admin from './components/admin/admin';
 import Logout from './components/Logout';
 import Profil from './user/profil';
 import Reset from './components/auth/Reset';
+import ProfilAdmin from './components/admin/ProfilAdmin';
+
+import profilUser from './components/apprenants/profilUser';
+
+
 
 
 
@@ -31,8 +36,9 @@ function App() {
  <Router>
         
         <Switch>
-      
+       
         <Route  path='/' exact component={Home}/>
+        
         <Route  path='/àpropos' exact component={About}/>
         <Route  path='/cours' exact component={PageCours}/>
         <Route  path='/communeauté' exact component={Equipe}/>
@@ -40,12 +46,13 @@ function App() {
         <Route  path='/login' exact component={Login}/>
         <Route  path='/register' exact component={SignUp}/>
         <Route  path='/reset' exact component={Reset}/>
-
+        <Route  path='/profil-Admin' exact component={ProfilAdmin}/>
         <Route  path='/profil' exact component={Profil}/>
         <Route  path='/admin' exact component={Admin}/>
         <Route  path='/logout' exact component={Logout}/>
+        <Route  path='/profil-user' exact component={profilUser}/>
         </Switch>
-      <Footer/>
+     
       </Router>
 
     </>

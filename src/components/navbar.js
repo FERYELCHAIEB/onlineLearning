@@ -8,7 +8,7 @@ import '../css/App.css'
   return (
   <>
   <Head/>
-  < header>
+  < header> 
    <nav className='flexSB'>
     <ul className={click ? "mobile-nav" : "flexSB " } onClick={()=>setClick(false)}>
         <li><Link to="/">Accueil</Link></li>
