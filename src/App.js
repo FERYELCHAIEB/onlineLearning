@@ -22,6 +22,8 @@ import Reset from './components/auth/Reset';
 import ProfilAdmin from './components/admin/ProfilAdmin';
 
 import profilUser from './components/apprenants/profilUser';
+import ListUser from './components/admin/user/ListUser';
+import EditUser from './components/admin/user/EditUser';
 
 
 
@@ -51,6 +53,8 @@ function App() {
         <Route  path='/admin' exact component={Admin}/>
         <Route  path='/logout' exact component={Logout}/>
         <Route  path='/profil-user' exact component={profilUser}/>
+        <Route  path='/admin/users' exact component={ListUser}/>
+        <Route  path='/admin/edit-user/:id' exact component={EditUser}/>
         </Switch>
      
       </Router>
