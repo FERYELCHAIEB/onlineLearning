@@ -24,6 +24,11 @@ import ProfilAdmin from './components/admin/ProfilAdmin';
 import profilUser from './components/apprenants/profilUser';
 import ListUser from './components/admin/user/ListUser';
 import EditUser from './components/admin/user/EditUser';
+import ListTeachers from './components/admin/user/ListTeachers';
+import Categorie from './components/admin/categorie/Categorie';
+import AddCateg from './components/admin/categorie/AddCateg';
+
+
 
 
 
@@ -54,7 +59,11 @@ function App() {
         <Route  path='/logout' exact component={Logout}/>
         <Route  path='/profil-user' exact component={profilUser}/>
         <Route  path='/admin/users' exact component={ListUser}/>
+        <Route  path='/admin/teachers' exact component={ListTeachers}/>
         <Route  path='/admin/edit-user/:id' exact component={EditUser}/>
+        <Route  path='/categorie' exact component={Categorie}/>
+        
+        <Route  path='/add-categorie' exact component={AddCateg}/>
         </Switch>
      
       </Router>
