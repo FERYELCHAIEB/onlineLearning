@@ -27,6 +27,7 @@ import EditUser from './components/admin/user/EditUser';
 import ListTeachers from './components/admin/user/ListTeachers';
 import Categorie from './components/admin/categorie/Categorie';
 import AddCateg from './components/admin/categorie/AddCateg';
+import Chart from './components/admin/user/Chart';
 
 
 
@@ -64,6 +65,7 @@ function App() {
         <Route  path='/categorie' exact component={Categorie}/>
         
         <Route  path='/add-categorie' exact component={AddCateg}/>
+        <Route  path='/chart' exact component={Chart}/>
         </Switch>
      
       </Router>

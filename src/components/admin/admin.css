@@ -1,0 +1,54 @@
+.box{
+    margin-left: 20%;
+ max-width: 80%;
+}
+
+.boxe{
+    margin-top: -350px;
+    margin-left: 500px; 
+    width: 80%;
+    text-align: center;
+}
+
+.boxe .btn{
+    width: 40%;
+    margin-left: 200px;
+}
+
+.boxe .tittre{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+i,a{
+    text-decoration: none;
+  
+}
+a:hover{
+    color:#fff 
+}
+
+.dashliste{
+    margin-left: 450px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-style: italic;
+
+}
+
+.dashliste i{
+    color: rgba(0, 0, 0, 0.3);
+}
+.cardy{
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+   
+    color: Azure;
+}
+
+.conteneeur{
+    margin-left: 270px;
+   position: relative;
+    top: -300px;
+}

@@ -1,0 +1,14 @@
+.avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+     
+ }
+ 
+ .avatar__profile__pic{
+     height: 100px !important;
+     width: 100px !important;
+     
+ }

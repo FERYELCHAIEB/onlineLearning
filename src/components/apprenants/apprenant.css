@@ -1,0 +1,65 @@
+
+
+header{
+    margin: 0;
+   
+}
+
+header ul li{
+    padding-left: 10px;
+}
+
+.header ul li a{
+    color: #fff;
+}
+
+.header ul li a:hover{
+    color: grey;
+}
+.drop{
+margin-right: 15px;
+}
+
+.drop a{
+    color: grey;
+    text-decoration: none;
+}
+
+.box{
+    margin-left: 20%;
+ max-width: 80%;
+}
+
+.boxe{
+    margin-top: -350px;
+    margin-left: 500px; 
+    width: 80%;
+    text-align: center;
+}
+
+.boxe .btn{
+    width: 40%;
+    margin-left: 200px;
+}
+
+.boxe .tittre{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+
+
+.tittle{
+    margin-right: 250px;
+  
+}
+
+.tittle h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.calender{
+    margin-top: 100px;
+    margin-left: 1100px;
+}
