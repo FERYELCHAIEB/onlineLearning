@@ -18,10 +18,10 @@ const upload = multer({storage : storage});
 
 
 //get all catégorie
-router.get("/get-categories/:path",(req,res)=>{
+router.get("/get-categories",(req,res)=>{
     Categories.find()
     .then((categ)=>{res.json(categ)
-    res.download(`../src/images/${req.params.path}`)})
+    })
     .catch((err)=>res.status(400).json(`error: ${err}`));
 });
 

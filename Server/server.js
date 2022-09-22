@@ -201,7 +201,7 @@ app.get("/users/:id",(req,res)=>{
 
 
 app.use("/",require("./routes/index"))
-app.use("/",require("./routes/categ"))
+app.use("/",require("./routes/coursCateg"))
 const connectDB= require("./config/db");
 dotenv.config({path:'./config/config.env'})
 

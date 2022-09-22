@@ -9,7 +9,7 @@ const Sidebar = () => {
        <>
         <div class="sidebar">
         <Link to="/admin"><i class="fa fa-fw fa-home"></i> Dashboard</Link><br/>
-        <Link to="/add-categorie"><i class="fa-solid fa-list"></i> Catégorie</Link>
+        <Link to="/get-categ"><i class="fa-solid fa-list"></i> Catégorie</Link>
         <Link to="/admin/users"><i class="fa-solid fa-user-graduate"></i> Apprenants</Link>
         <Link to="/admin/teachers"><i class="fa-solid fa-chalkboard-user"></i> Formateurs</Link>
        
