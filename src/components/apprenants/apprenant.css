@@ -24,6 +24,10 @@ margin-right: 15px;
     color: grey;
     text-decoration: none;
 }
+.drop a i{
+    color: grey;
+    text-decoration: none;
+}
 
 .box{
     margin-left: 20%;
@@ -36,7 +40,7 @@ margin-right: 15px;
     width: 80%;
     text-align: center;
 }
-
+ 
 .boxe .btn{
     width: 40%;
     margin-left: 200px;
@@ -63,3 +67,4 @@ margin-right: 15px;
     margin-top: 100px;
     margin-left: 1100px;
 }
+

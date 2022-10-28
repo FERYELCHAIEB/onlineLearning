@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 
 
-const formSchema = mongoose.Schema({
+const categSchema = mongoose.Schema({
    nom:{
         type:String,
         required:true,
@@ -17,4 +17,4 @@ const formSchema = mongoose.Schema({
     },
 })
 
-module.exports = (mongoose.model("coursCateg",formSchema))
+module.exports = (mongoose.model("coursCateg",categSchema))

@@ -2,7 +2,7 @@ const express = require("express")
 const formidable = require("formidable")
 const fs = require("fs")
 
-const Categories = require("../modals/coursCateg");
+const Catego = require("../modals/coursCateg")
 const router = express.Router();
 
 
@@ -14,13 +14,13 @@ const createForm = (req, res) => {
             return res.status(400).json({ error: err })
         }
         if (!fields.nom || !fields.desc || !file.photo) {
-            return res.status(400).json({ error: "Tous les champs sont requis" })
+            return res.status(400).json({ error: "Fill all the fields" })
         }
 
-        const categ = new Categories(fields)
+        const categ = new Catego(fields)
         if (file.photo) {
             if (file.photo.size > 100000) {
-                return res.status(400).json({ error: "photo de grande taille" })
+                return res.status(400).json({ error: "file size is too big" })
             }
             categ.photo.data = fs.readFileSync(file.photo.filepath)
             categ.photo.contentType = file.photo.mimetype
@@ -36,23 +36,23 @@ const createForm = (req, res) => {
 
 }
 const updateForm = (req, res) => {
-    let id = req.params.id;
+    let id = req.params.categId;
     const form = new formidable.IncomingForm()
     form.parse(req, (err, fields, file) => {
         if (err) {
             return res.status(400).json({ error: err })
         }
-       Categories.findByIdAndUpdate(
+       Catego.findByIdAndUpdate(
         id,
         {$set:{...fields}},
         {new:true},
         (err,categ)=>{
             if (err) {
-                return res.status(400).json({ error: "categorie non existante" })
+                return res.status(400).json({ error: "categ not found" })
             } 
             if (file.photo) {
                 if (file.photo.size > 100000) {
-                    return res.status(400).json({ error: "fichier de grand taille" })
+                    return res.status(400).json({ error: "file size is too big" })
                 }
                 categ.photo.data = fs.readFileSync(file.photo.filepath)
                 categ.photo.contentType = file.photo.mimetype
@@ -72,10 +72,10 @@ const updateForm = (req, res) => {
 
 
 const categPhoto = (req, res) => {
-    let id = req.params.id;
-        Categories.findById(id).exec((err, categ) => {
+    let id = req.params.categId;
+    Catego.findById(id).exec((err, categ) => {
         if (err || !categ) {
-            res.status(400).json({ error: "categorie non trouvé" })
+            res.status(400).json({ error: "categ not found" })
         }
         else {
             if (categ.photo.data) {
@@ -88,7 +88,7 @@ const categPhoto = (req, res) => {
 
 //getForm
 const getForm = (req, res) => {
-    Categories.find((err, data) => {
+    Catego.find((err, data) => {
         if (err) {
             return res.json({ error: err })
         }
@@ -97,16 +97,16 @@ const getForm = (req, res) => {
 }
 
 const deleteForm=async(req,res)=>{
-    const id = req.params.id;
-    const del = await Categories.findByIdAndDelete(id)
+    const id = req.params.categId;
+    const del = await Catego.findByIdAndDelete(id)
     res.json(del)
 }
 
 router.post("/create", createForm)
 router.get("/get", getForm)
 //for photo
-router.get("/photo/:id", categPhoto)
-router.put("/edit/:id", updateForm)
-router.delete("/delete/:id",deleteForm)
+router.get("/photo/:categId", categPhoto)
+router.put("/edit/:categId", updateForm)
+router.delete("/delete/:categId",deleteForm)
 
 module.exports = router; 

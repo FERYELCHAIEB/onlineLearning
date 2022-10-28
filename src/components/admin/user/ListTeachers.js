@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import '../admin.css'
 import UserService from './Services';
 import { Table, Button } from 'react-bootstrap';
+import NavAdmin from '../NavAdmin';
 var divStyle = {
     margin: '8% 8%',
     };
@@ -44,7 +45,8 @@ export default class ListTeachers extends Component {
         render() {
              
         const { teachers } = this.state;
-        return (
+        return (<>
+            <NavAdmin/>
         <div style={divStyle}>
               <h1 className='dashliste'>Liste des Formateurs <i class="fa-solid fa-users-gear"></i></h1>
         <Table variant="dark" >
@@ -88,6 +90,7 @@ export default class ListTeachers extends Component {
         
         <Button variant="info" ><Link to="/admin"><i class="fa-solid fa-hand-point-left"> </i> retour</Link></Button>
         </div>
+        </>
         );
         } 
         }

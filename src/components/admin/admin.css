@@ -52,3 +52,48 @@ a:hover{
    position: relative;
     top: -300px;
 }
+
+div.row.ok{
+    top: 0;
+    position: absolute;
+    margin: 100px 0px 50px 0;
+   width: 70%;
+   margin-left: 180px;
+   
+}
+div.row.ok .boutton{
+    margin-bottom: 20px;
+}
+
+
+
+.formCateg{
+   
+    padding-left: 350px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+   
+    
+}
+
+.formCateg input{
+    height: 45px;
+    width: 800px;
+}
+
+
+
+.formUser{
+  
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    left: -200px;
+}
+
+.formUser input{
+    height: 45px;
+    width: 500px;
+}
+
+

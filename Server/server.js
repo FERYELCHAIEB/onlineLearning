@@ -199,9 +199,9 @@ app.get("/users/:id",(req,res)=>{
 })
 
 
-
+const formRoutes =require("./routes/coursCateg")
 app.use("/",require("./routes/index"))
-app.use("/",require("./routes/coursCateg"))
+app.use(formRoutes)
 const connectDB= require("./config/db");
 dotenv.config({path:'./config/config.env'})
 

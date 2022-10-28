@@ -28,9 +28,14 @@ import ListTeachers from './components/admin/user/ListTeachers';
 
 
 
-import GetCateg from './components/admin/coursCategorie/GetCateg';
-import CreateCateg from './components/admin/coursCategorie/CreateCateg';
-import EditCateg from './components/admin/coursCategorie/EditCateg';
+
+import GetForm from './components/admin/categorie/GetForm';
+import CreateForm from './components/admin/categorie/CreateForm';
+
+
+import EditForm from './components/admin/categorie/EditForm';
+import { Categorie } from './components/apprenants/Categorie';
+
 
 
 
@@ -65,12 +70,17 @@ function App() {
         <Route  path='/admin/users' exact component={ListUser}/>
         <Route  path='/admin/teachers' exact component={ListTeachers}/>
         <Route  path='/admin/edit-user/:id' exact component={EditUser}/>
+        <Route  path='/categorie' exact component={Categorie}/>
        
         
 
-        <Route path="/get-categ" exact component={GetCateg} />
-          <Route path="/create"  exact component={CreateCateg}/>
-          <Route path="/edit/:Id"  exact component={EditCateg}/>
+       
+
+
+
+          <Route path="/getform" exact component={GetForm} />
+          <Route path="/create" exact component={CreateForm} />
+          <Route path="/edit/:categId" exact component={EditForm}/>
         </Switch>
      
       </Router>

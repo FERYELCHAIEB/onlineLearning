@@ -9,6 +9,7 @@ const SideCalender = () => {
       <Calendar
         onChange={onChange}
         value={value}
+        
       />
     </div>
     );

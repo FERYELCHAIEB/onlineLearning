@@ -1,20 +1,27 @@
+import React,{useEffect, useState} from 'react'
+import { Button } from 'react-bootstrap'
+import '../admin.css'
+import {Link, Redirect} from "react-router-dom" 
+import NavAdmin from '../NavAdmin'
 
-import React,{useState} from 'react'
-import './form.css'
-import { Redirect} from "react-router-dom" 
-import { Button } from 'react-bootstrap';
-
-const CreateCateg = () => {
+const EditForm = () => {
+    
+    
     const [categ,setCateg]=useState({
         nom:"",
         desc:"",
         photo:"",
-        formData: new FormData(),
+       
         error:"",
         open:false,
     })
-    const{nom,desc,photo,formData,error,open}=categ
+    const[form,setForm]=useState({
+        formData: new FormData(),
+    })
+    const {formData} = form;
+    const{_id,nom,desc,photo,error,open}=categ
 
+    
     const handleChange=event=>{
         const{name}=event.target;
         const value=name==="photo"?event.target.files[0]:event.target.value
@@ -24,8 +31,8 @@ const CreateCateg = () => {
 
     const submit=async()=>{
         try{
-            const res=await fetch(`http://localhost:5000/create`,{
-                method:"post",
+            const res=await fetch(`http://localhost:5000/edit/${_id}`,{
+                method:"PUT",
                 body:formData
             })
             const data = await res.json()
@@ -44,48 +51,49 @@ const CreateCateg = () => {
     }
    
 
-    
+    //form
     const fillForm=()=>{
-        return   <form onSubmit={e=>e.preventDefault()}>
-              <div className='form-group'>
-                <label className='text-muted'>Photo</label>
+        return   <form onSubmit={e=>e.preventDefault()} className="formCateg">
+        <div className='form-group'>
+                <label className='text-muted'>Image de la catégorie</label><br/>
                 <input 
                 type="file"
                 onChange={handleChange}
                 name="photo"
                 />
             </div>
-       
         <div className='form-group'>
-                <label className='text-muted'>Nom</label>
+                <label className='text-muted'>Nom de la catégorie</label><br/>
                 <input 
-                
                 type="text"
                 value={nom}
-                name="nom"
+                name="name"
                 onChange={handleChange}
                 />
             </div>
             <div className='form-group'>
-                <label className='text-muted'>Description</label>
+                <label className='text-muted'>Description</label><br/>
                 <input 
                 type="text"
                 value={desc}
                 name="desc"
-               
                 onChange={handleChange}
                 />
             </div>
           
-            <Button  variant=' btn-warning' className='btn btn-raised mt-2 forma' onClick={()=>submit()}>confirmer</Button>
+            <div>
+            <Button variant="info mt-3" onClick={()=>submit()} style={{color:"#fff"}}>Modifier</Button>{' '}
+            <Link className="btn btn-outline-info mt-3" to='/getform' >retour</Link>
+            </div>
         </form>
     }
     if(open){
-       return  <Redirect to="/get-categ" />
+       return  <Redirect to="/" />
     }
-  return (
+  return (<>
+    <NavAdmin/>
     <div className='container'>
-        <h2 className='mt-5 mb-5'>Ajouter une Catégorie</h2>
+        <h2 className='mt-5 mb-5' style={{color:"#05DDFA"}}>Modifier catégorie</h2>
         <div className='alert alert-danger' 
         style={{display:error?"":"none"}}
         >
@@ -100,7 +108,8 @@ const CreateCateg = () => {
       
 
     </div>
+    </>
   )
 }
 
-export default CreateCateg
+export default EditForm

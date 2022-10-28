@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Card from '@material-ui/core/Card';
-import './cards.css'
+
 import CardContent from '@material-ui/core/CardContent';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -13,7 +13,8 @@ const useStyles = makeStyles({
   },
  
   title: {
-    fontSize: 14,
+    fontSize: '20px',
+    
    
   },
 

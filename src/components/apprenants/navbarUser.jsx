@@ -56,11 +56,11 @@ export default class navbarUser extends Component {
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item ><Link to="/profil-user"><i class="fa-solid fa-circle-user"></i> Profil</Link></Dropdown.Item>
-        <Dropdown.Item ><Link to="/logout"><i class="fa-solid fa-gear"></i> Paramétres</Link></Dropdown.Item>
+        <Dropdown.Item ><Link to="/profil-user"><i class="fa-solid fa-circle-user col"></i> Profil</Link></Dropdown.Item>
+        <Dropdown.Item ><Link to="/logout"><i class="fa-solid fa-gear col"></i> Paramétres</Link></Dropdown.Item>
         
-        <Dropdown.Item ><Link to="/logout"><i class="fa-solid fa-circle-question"></i> Aide</Link></Dropdown.Item>
-        <Dropdown.Item ><Link to="/logout"><i class="fa-solid fa-right-from-bracket"></i> Déconnexion</Link></Dropdown.Item>
+        <Dropdown.Item ><Link to="/logout"><i class="fa-solid fa-circle-question col"></i> Aide</Link></Dropdown.Item>
+        <Dropdown.Item ><Link to="/logout"><i class="fa-solid fa-right-from-bracket col"></i> Déconnexion</Link></Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
 </nav>

@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+
 import Cards from '../Cards/card';
 import Sidebar from '../../Sidebar/Sidebar';
-import ProfilAdmin from './ProfilAdmin';
-import axios from 'axios';
-import CountUser from './user/CountUser';
 
+import CountUser from './user/CountUser';
+import './admin.css'
 export default class Admin extends Component {
   
   constructor(props){
@@ -41,7 +40,7 @@ this.state={
    
   return (<>
    <CountUser/>
-   <Cards title="Espace Admin"/>
+   <Cards title="Espace Administrateur" />
   
    <Sidebar/>
    
